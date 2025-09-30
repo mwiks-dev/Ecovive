@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Team - Ecovive Farm</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Main Page styling */
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: #183d20;
+            color: white;
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-weight: 700;
+        }
+        /* --- Team Section --- */
+        .team-section {
+            padding: 4rem 1rem;
+        }
+        .team-card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 35px rgba(0,0,0,0.15);
+        }
+        .team-card .card-img-top {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+        .team-card .card-body {
+            padding: 1.5rem;
+        }
+        .team-card .card-title {
+            font-weight: 600;
+            color: #343a40;
+        }
+        .team-card .card-subtitle {
+            color: #f4bc21;
+            font-weight: 500;
+        }
+        .team-card .card-text {
+            color: #555;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Placeholder -->
+    <div id="eco-nav"></div>
+
+    <!-- Main Content -->
+    <main class="management-page">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="display-4">Management Team</h1>
+                <p class="lead">The driving force behind our success</p>
+            </div>
+        </section>
+
+        <!-- Team Members Grid -->
+        <section class="team-section">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <!-- Team Member 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card team-card">
+                            <img src="assets/PHOTO-2025-08-25-13-44-31.jpg" class="card-img-top" alt="Team Member Name">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">David Lesamana</h5>
+                                <h6 class="card-subtitle mb-2">Chief Executive Officer</h6>
+                                <p class="card-text">David leads the company with a vision for sustainable agriculture and market expansion, bringing over 20 years of experience in the livestock industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card team-card">
+                            <img src="assets/PHOTO-2025-08-25-13-30-35.jpg" class="card-img-top" alt="Team Member Name">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Lpaletu Lesingiran</h5>
+                                <h6 class="card-subtitle mb-2">Chief Operations Officer</h6>
+                                <p class="card-text">Lpaletu oversees the day-to-day operations, ensuring efficiency and quality control across the entire value chain from farm to market.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="eco-footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Script to load navbar and footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loadComponent = (url, placeholderId) => {
+                return fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load ${url}`);
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(placeholderId).innerHTML = data;
+                    });
+            };
+
+            loadComponent("navbar.html", "eco-nav")
+                .then(() => {
+                    const currentPage = window.location.pathname.split("/").pop() || "management.html";
+                    const navLinks = document.querySelectorAll("#navbar-placeholder .nav-link");
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPage) {
+                            link.classList.add("active");
+                            link.setAttribute("aria-current", "page");
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+
+            loadComponent("footer.html", "eco-footer")
+                .catch(error => console.error('Error loading the footer:', error));
+        });
+    </script>
+</body>
+</html>

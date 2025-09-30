@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Gencoli Livestock</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <style>
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: #183d20;
+            color: white;
+            padding: 9rem 1rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 3rem;
+        }
+        .hero-intro {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .container {
+            position: relative;
+        }
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: -100px;
+            position: relative;
+            z-index:10;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: black;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .offices {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .office {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #f4bc21;
+        }
+
+        .office h3 {
+            color:black;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .office p {
+            color: black;
+            margin-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #97bc62;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #f4bc21;
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(44, 95, 45, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: #f4bc21;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Tablet styles */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .offices {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .submit-btn {
+                width: auto;
+                min-width: 200px;
+            }
+        }
+
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            header {
+                padding: 80px 20px;
+            }
+
+            .content-wrapper {
+                margin-top: -60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Placeholder -->
+    <div id="eco-nav"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 >Contact Us</h1>
+                <p class="hero-intro">We'd love to hear from you. Reach out to us today.</p>
+            </div>
+        </section>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <!-- Contact Form -->
+            <div class="card">
+                <h2>Send us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="livestock">Livestock Services</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                            <option value="support">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Office Information -->
+            <div>
+                <div class="card">
+                    <h2>Office Locations</h2>
+                    <div class="offices">
+                        <div class="office">
+                            <h3>Nairobi Office</h3>
+                            <p><strong>Address:</strong></p>
+                            <p>Sameer Business Park</p>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+
+                        <div class="office">
+                            <h3>Samburu Office</h3>
+                            <p><strong>Address:</strong></p>
+                            <p>Maralal</p>
+                            <p>Samburu County, Kenya</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="icon">📧</div>
+                            <div>
+                                <strong>Email</strong>
+                                <p> info@ecovive.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon">📞</div>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+254 723 316696</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon">🕐</div>
+                            <div>
+                                <strong>Business Hours</strong>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #2c5f2d; margin-bottom: 30px; font-size: 2rem;">Find Us</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8176449032847!2d36.8219!3d-1.2864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d6b0c9e6e9%3A0x8b5b5b5b5b5b5b5b!2sSameer%20Business%20Park!5e0!3m2!1sen!2ske!4v1234567890"
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    </main>
+    <!-- Footer Placeholder -->
+    <div id="eco-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>   
+    <script>
+        // Load Navbar and then set active link
+        document.addEventListener("DOMContentLoaded", function() {
+            const loadComponent = (url, placeholderId) => {
+                return fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load ${url}`);
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(placeholderId).innerHTML = data;
+                    });
+            };
+
+            loadComponent("navbar.html", "eco-nav")
+                .then(() => {
+                    const currentPage = window.location.pathname.split("/").pop() || "management.html";
+                    const navLinks = document.querySelectorAll("#navbar-placeholder .nav-link");
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPage) {
+                            link.classList.add("active");
+                            link.setAttribute("aria-current", "page");
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+
+            loadComponent("footer.html", "eco-footer")
+                .catch(error => console.error('Error loading the footer:', error));
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("eco-nav").innerHTML = data;
+
+                    // Get the current page's filename (e.g., "about.html")
+                    const currentPage = window.location.pathname.split("/").pop();
+
+                    // Find all nav links
+                    const navLinks = document.querySelectorAll("#navbarNav .nav-link");
+
+                    // Loop through links to find the one that matches the current page
+                    navLinks.forEach(link => {
+                        const linkPage = link.getAttribute("href");
+                        if (linkPage === currentPage) {
+                            link.classList.add("active");
+                            link.setAttribute("aria-current", "page");
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+        });
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            // Here you would typically send the data to your server
+            console.log('Form submitted:', formData);
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

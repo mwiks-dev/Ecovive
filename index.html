@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecovive Farm - Home</title>
+    <!-- Latest Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* --- Carousel Styling --- */
+        .carousel-item {
+            height: 85vh; /* Use viewport height for responsiveness */
+            min-height: 400px;
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        /* --- Content Section Styling --- */
+        .content-section {
+            padding: 4rem 0;
+        }
+        .content-section h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .content-section .side-image {
+            object-fit: cover;
+            height: 100%;
+            border-radius: 0.5rem;
+        }
+
+        /* --- Quote/CTA Section Styling --- */
+        .quote-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/Sahiwal.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            color: white;
+            padding: 6rem 0;
+        }
+        .quote-section .display-5 {
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+        .quote-section .lead {
+            font-size: 1.1rem;
+            max-width: 500px;
+        }
+        .quote-section .highlight-text {
+            color: #f4bc21;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Placeholder -->
+    <div id="eco-nav"></div>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/beef.jpg" class="d-block w-100" alt="Quality Beef Cattle">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Traceable & High-Quality Livestock</h5>
+                    <p>From our farm to your table, ensuring quality every step of the way.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/bgeco3.jpeg" class="d-block w-100" alt="Sahiwal Cattle Grazing">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Sustainable Farming Practices</h5>
+                    <p>Empowering smallholder farmers and regenerating the land.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/FPltF9-WUAAxr3r - Copy.jpg" class="d-block w-100" alt="Healthy Herd of Cattle">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Building a Resilient Supply Chain</h5>
+                    <p>Connecting local producers with regional and global markets.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Company Mission Section -->
+    <div class="container content-section">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7">
+                <div class="mb-4">
+                    <h3>Who We Are</h3>
+                    <p>Ecovive Farm is a pioneering livestock aggregation and value chain enterprise based in Kenya with a scalable model targeting East and Central Africa.</p>
+                    <p>Our goal is to transform fragmented livestock supply chains by working directly with smallholder producers, regenerating underutilized lands for Sustainable fodder production, and delivering traceable, market-ready livestock to both local and international buyers.</p>
+                </div>
+                <div class="mb-4">
+                    <h3>Our Vision</h3>
+                    <p>To transform the informal livestock sector into a traceable, export-ready and inclusive value chain through farmer producers partnership approach. To ensure rural wealth creation and build sustainable agribusiness systems in ASAL regions.</p>
+                </div>
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>To create resilient supply chains for quality livestock by empowering smallholder farmers, regenerating idle land for feed, and delivering traceable, export-ready animals to regional and global markets.</p>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="assets/bgeco.jpeg" class="w-100 side-image" alt="Ecovive Farm Operations">
+            </div>
+        </div>
+    </div>
+
+        <!-- Quote/CTA Section -->
+    <div class="quote-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                    <p class="highlight-text">Partner With Us Today</p>
+                    <h2 class="display-5 mb-4">Looking for Organic, Sustainable, and Premium Meat?</h2>
+                    <a href="#" class="btn btn-custom" role="button">Request A Quote</a>
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead mb-0">All our livestock are raised without synthetic hormones or antibiotics, adhering to organic farming standards. This not only ensures a healthier product but also protects the environment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="eco-footer"></div>
+
+
+    <!-- Latest Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+    <script src="script.js"></script>
+    <!-- Updated Script to load both navbar and footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to fetch and insert HTML content
+            const loadComponent = (url, placeholderId) => {
+                return fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load ${url}`);
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(placeholderId).innerHTML = data;
+                    });
+            };
+
+            // Load Navbar and then set active link
+            loadComponent("navbar.html", "eco-nav")
+                .then(() => {
+                    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+                    const navLinks = document.querySelectorAll("#eco-nav .nav-link");
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPage) {
+                            link.classList.add("active");
+                            link.setAttribute("aria-current", "page");
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+
+            // Load Footer
+            loadComponent("footer.html", "eco-footer")
+                .catch(error => console.error('Error loading the footer:', error));
+        });
+    </script>
+</body>
+</html>

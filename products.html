@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Gencoli Livestock</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <style>
+        /* Hero Section */
+        .hero-section {
+            background-color: #183d20;
+            color: white;
+            padding: 9rem 1rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-intro {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* Product Categories */
+        .product-section {
+            padding: 60px 0;
+        }
+
+        .product-section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            color: #2c5f2d;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #f4bc21;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            padding-top: 20px;
+        }
+
+        /* Product Cards */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            color: #2c5f2d;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .quote-btn {
+            background-color: #2c5f2d;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .quote-btn:hover {
+            background-color: #f4bc21;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(244, 188, 33, 0.4);
+            color: white;
+        }
+
+        /* Fodder Section - Special Styling */
+        .fodder-section {
+            background-color: #fffbf0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero-section {
+                padding: 9rem 1rem 3rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-intro {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .product-section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Placeholder -->
+    <div id="eco-nav"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Premium Meat & Fodder Solutions</h1>
+                <p class="hero-intro">
+                    From farm to table, we provide exceptional quality in every product. Our expertise spans premium livestock exports, superior-grade fodder, and an extensive portfolio of fresh and frozen meat offerings - featuring lamb, goat, and beef. Through meticulous sourcing and stringent quality controls at every production stage, we ensure our clients receive world-class products that consistently exceed international standards.
+                </p>
+            </div>
+        </section>
+
+        <!-- Chilled Lamb Section -->
+        <section class="product-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Premium Lamb Collection</h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="assets/images.jpg" alt="Lamb Products" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Export-Grade Lamb Products</h3>
+                            <p class="product-description">Sourced from select farms practicing ethical animal husbandry, our lamb products undergo comprehensive quality verification to guarantee international export standards.</p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/images (5).jpg" alt="Lamb Cuts" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Artisan Lamb Portions</h3>
+                            <p class="product-description">
+                                Experience our carefully curated range featuring crown roasts, French-trimmed racks, butterflied legs, and specialty medallions - each cut showcasing exceptional marbling and flavor.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Culinary Applications" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Chef's Choice Quality</h3>
+                            <p class="product-description">
+                                Whether creating Mediterranean delicacies, Middle Eastern specialties, or modern fusion cuisine, our lamb's tender texture and nuanced flavor profile elevates every dish.                            
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chilled Goats Section -->
+        <section class="product-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Select Goat Offerings</h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="assets/beef3.jpg" alt="Goat Products" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Certified Goat Meat</h3>
+                            <p class="product-description">
+                                Hand-selected from responsible farms following traditional rearing methods, our goat meat meets strict health certifications while preserving authentic taste and nutritional value.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/beef2.jpg" alt="Goat Cuts" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Traditional & Modern Goat Cuts</h3>
+                            <p class="product-description">
+                                From classic bone-in sections perfect for slow cooking to contemporary boneless cuts ideal for quick preparation, our range satisfies diverse culinary traditions and preferences.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/images (8).jpg" alt="Culinary Applications" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Global Cuisine Favorite</h3>
+                            <p class="product-description">
+                                Prized in Caribbean, African, South Asian, and Mediterranean cooking, our lean, flavorful goat meat brings authentic taste to biryanis, curries, barbecues, and stews worldwide.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chilled Beef Section -->
+        <section class="product-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Elite Beef Portfolio </h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Beef Products" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Heritage Breed Beef</h3>
+                            <p class="product-description">
+                                Carefully selected from renowned cattle lineages celebrated for optimal fat distribution, our beef delivers the perfect balance of tenderness, juiciness, and rich, full-bodied flavor.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=800&q=80" alt="Beef Cuts" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Complete Beef Assortment</h3>
+                            <p class="product-description">
+                                Our catalog includes everything from premium tenderloin and New York strips to value-added minced beef and specialty briskets, all precision-cut and hygienically packaged for optimal shelf life.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/images (12).jpg" alt="Flavor and Juiciness" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Restaurant-Quality Performance</h3>
+                            <p class="product-description">
+                                From high-heat searing to low-and-slow smoking or Asian wok cooking, our beef maintains its moisture and develops deep, caramelized flavors across all culinary techniques.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customized Packaging Section -->
+        <section class="product-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tailored Packaging Services</h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="assets/images (11).jpg" alt="Custom Products" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Made-to-Order Solutions</h3>
+                            <p class="product-description">
+                                We go beyond standard offerings with comprehensive customization capabilities, adapting our products to match your brand requirements, target markets, and distribution channels perfectly.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/1597002384968 - Copy.png" alt="Tailored Products" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Partnership in Precision</h3>
+                            <p class="product-description">
+                                From weight specifications and private labeling to modified atmosphere packaging and retail-ready formats, we develop collaborative solutions that drive your business success.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fodder & Pasture Section -->
+        <section class="product-section fodder-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sustainable Forage Systems</h2>
+                    <p class="section-subtitle">
+                       Healthy animals start with nutritious feed. We champion sustainable pasture solutions that enhance livestock productivity while advancing land restoration, climate adaptation, and carbon sequestration. Our carefully selected grass varieties thrive in challenging semi-arid environments, strengthen pastoral livelihoods, and actively support international environmental initiatives for a greener future.
+                    </p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="assets/bomarhodes1.webp" alt="Boma Rhodes Grass" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Boma Rhodes Grass</h3>
+                            <p class="product-description">
+                                Engineered for water efficiency and soil regeneration, this proven variety delivers reliable biomass for both pasture grazing and preserved hay, while actively rebuilding degraded landscapes and sequestering atmospheric carbon.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="assets/masaiwebp" alt="Masai Love Grass" class="product-image">
+                        <div class="product-content">
+                            <h3 class="product-title">Masai Love Grass</h3>
+                            <p class="product-description">
+                                A locally-adapted perennial champion for water-scarce regions, this grass protects against land degradation, maintains balanced grazing pressure, and nurtures beneficial wildlife habitats across pastoral ecosystems.
+                            </p>
+                            <a href="/request-quote" class="quote-btn">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="eco-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>   
+    <script>
+        // Load Navbar and Footer
+        document.addEventListener("DOMContentLoaded", function() {
+            const loadComponent = (url, placeholderId) => {
+                return fetch(url)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Failed to load ${url}`);
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(placeholderId).innerHTML = data;
+                    });
+            };
+
+            loadComponent("navbar.html", "eco-nav")
+                .then(() => {
+                    const currentPage = window.location.pathname.split("/").pop() || "products.html";
+                    const navLinks = document.querySelectorAll("#navbar-placeholder .nav-link");
+                    navLinks.forEach(link => {
+                        if (link.getAttribute("href") === currentPage) {
+                            link.classList.add("active");
+                            link.setAttribute("aria-current", "page");
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+
+            loadComponent("footer.html", "eco-footer")
+                .catch(error => console.error('Error loading the footer:', error));
+        });
+    </script>
+</body>
+</html>
